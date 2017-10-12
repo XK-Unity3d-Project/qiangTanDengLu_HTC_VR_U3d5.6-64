@@ -1521,7 +1521,7 @@ public class XkGameCtrl : MonoBehaviour {
 		}
 		else {
             if (SceneManager.GetActiveScene().buildIndex < (int)GameLevel.Scene_2
-                && SceneManager.GetActiveScene().buildIndex < (Application.levelCount - 1)
+                && SceneManager.GetActiveScene().buildIndex < (SceneManager.sceneCountInBuildSettings - 1)
                 && !GameOverCtrl.IsShowGameOver) {
                 int loadLevel = SceneManager.GetActiveScene().buildIndex + 1;
                 Debug.Log("loadLevel *** "+loadLevel);

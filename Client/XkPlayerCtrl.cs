@@ -536,7 +536,7 @@ PlayerAudio[6] -> 主角飞机/坦克行驶音效.
 //		Debug.LogError("SpeedA *** "+SpeedA+", MarkCount "+MarkCount+", maxNodes "+maxNodes);
 //		Debug.LogWarning("SpeedA *** "+SpeedA+", SpeedB "+SpeedB);
 		if (!IsStartMovePlayerByMark) {
-			StartCoroutine(MovePlayerByMarkSpeed());
+			//StartCoroutine(MovePlayerByMarkSpeed());
 			IsStartMovePlayerByMark = true;
 		}
 	}
