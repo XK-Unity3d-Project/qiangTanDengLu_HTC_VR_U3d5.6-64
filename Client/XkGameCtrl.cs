@@ -73,8 +73,9 @@ public class XkGameCtrl : MonoBehaviour {
 	Transform FeiJiPlayerTran;
 	int FeiJiMarkIndex = 1;
 	AiPathCtrl FeiJiPlayerPath;
+	public GameObject XuNiTanKePlayer;
 	public GameObject TanKePlayer;
-	public AiMark TanKePlayerMark;
+    public AiMark TanKePlayerMark;
 	Transform TanKePlayerTran;
 	int TanKeMarkIndex = 1;
 	AiPathCtrl TanKePlayerPath;
@@ -352,10 +353,9 @@ public class XkGameCtrl : MonoBehaviour {
 
 		case GameMode.DanJiTanKe:
 			GameJiTaiSt = GameJiTaiType.TanKeJiTai; //test
-			//obj = (GameObject)Instantiate(TanKePlayer, posPlayerTK, TanKePlayerTran.rotation);
-			obj = (GameObject)Instantiate(TanKePlayer,
-											TanKePlayerMark.transform.position + new Vector3(0f, 0.8f, 0f),
-											TanKePlayerMark.transform.rotation);
+            //产生虚拟坦克主角.
+            Instantiate(XuNiTanKePlayer, TanKePlayerMark.transform.position, TanKePlayerMark.transform.rotation);
+            obj = Instantiate(TanKePlayer, TanKePlayerMark.transform.position + new Vector3(0f, 0.8f, 0f), TanKePlayerMark.transform.rotation);
 			playerScript = obj.GetComponent<XkPlayerCtrl>();
 			playerScript.SetAiPathScript(TanKePlayerPath);
 //			PlayerTranCurrent = obj.transform;

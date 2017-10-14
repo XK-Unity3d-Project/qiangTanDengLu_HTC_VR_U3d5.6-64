@@ -152,7 +152,7 @@ public class XKSpawnNpcPoint : MonoBehaviour {
 			GameObject obj = null;
 			obj.name = "null";
 		}
-		Invoke("CheckIsRemoveTrigger", 1f);
+		//Invoke("CheckIsRemoveTrigger", 1f);
 	}
 
 	int IndexFeiJiPoint;

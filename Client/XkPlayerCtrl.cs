@@ -538,6 +538,7 @@ PlayerAudio[6] -> 主角飞机/坦克行驶音效.
 		if (!IsStartMovePlayerByMark) {
 			//StartCoroutine(MovePlayerByMarkSpeed());
 			IsStartMovePlayerByMark = true;
+            XKXuNiPlayerCtrl.GetInstance().InitXuNiPlayerInfo(markScript);
 		}
 	}
 

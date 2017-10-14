@@ -45,21 +45,27 @@ public class XKTriggerSpawnNpc : MonoBehaviour {
         //    return;
         //}
 
-		XkPlayerCtrl ScriptPlayer = other.GetComponent<XkPlayerCtrl>();
-		if (ScriptPlayer == null) {
-			return;
-		}
+		//XkPlayerCtrl ScriptPlayer = other.GetComponent<XkPlayerCtrl>();
+		//if (ScriptPlayer == null) {
+		//	return;
+		//}
 
-		//test
-//		if (ScriptPlayer.PlayerSt == PlayerTypeEnum.FeiJi) {
-//			IsDonnotSpawnNpcTest = true;
-//		}
-//		else {
-//			return;
-//		}
+        XKXuNiPlayerCtrl ScriptPlayer = other.GetComponent<XKXuNiPlayerCtrl>();
+        if (ScriptPlayer == null)
+        {
+            return;
+        }
 
-		//Debug.Log("XKTriggerSpawnNpc::OnTriggerEnter -> hit "+other.name);
-		for (int i = 0; i < SpawnPointArray.Length; i++) {
+        //test
+        //		if (ScriptPlayer.PlayerSt == PlayerTypeEnum.FeiJi) {
+        //			IsDonnotSpawnNpcTest = true;
+        //		}
+        //		else {
+        //			return;
+        //		}
+
+        //Debug.Log("XKTriggerSpawnNpc::OnTriggerEnter -> hit "+other.name);
+        for (int i = 0; i < SpawnPointArray.Length; i++) {
 			SpawnPointArray[i].SpawnPointAllNpc();
 		}
 	}
