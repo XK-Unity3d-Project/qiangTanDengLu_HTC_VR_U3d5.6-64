@@ -64,13 +64,15 @@ public class XKPlayerGunRotCtrl : MonoBehaviour
 		}
 	}
 
+    public GameObject CameraMainObj;
 	void UpdatePlayerGunRot()
 	{
 		if (Camera.main == null) {
 			return;
 		}
+        CameraMainObj = Camera.main.gameObject;
 
-		Vector3 mousePosInput = pcvr.GetPlayerMousePos(PlayerEnum.PlayerTwo);
+        Vector3 mousePosInput = pcvr.GetPlayerMousePos(PlayerEnum.PlayerTwo);
 		CurPX = mousePosInput.x;
 		CurPY = mousePosInput.y;
 		CurPX = CurPX < 0f ? 0f : CurPX;
