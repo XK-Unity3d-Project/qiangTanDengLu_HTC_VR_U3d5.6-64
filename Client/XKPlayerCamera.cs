@@ -44,13 +44,13 @@ public class XKPlayerCamera : MonoBehaviour {
 	void Awake()
 	{
 		CameraVRTr = XkGameCtrl.GetInstance().CameraVRObj[0].transform;
-        if (PlayerGunCameraObj != null && PlayerGunCameraObj.Length >= 2) {
-            for (int i = 0; i < 2; i++) {
-                if (PlayerGunCameraObj[i] != null) {
-                    PlayerGunCameraObj[i].SetActive(XkGameCtrl.GetInstance().IsOpenVR);
-                }
-            }
-        }
+        //if (PlayerGunCameraObj != null && PlayerGunCameraObj.Length >= 2) {
+        //    for (int i = 0; i < 2; i++) {
+        //        if (PlayerGunCameraObj[i] != null) {
+        //            PlayerGunCameraObj[i].SetActive(XkGameCtrl.GetInstance().IsOpenVR);
+        //        }
+        //    }
+        //}
 	}
 
 	// Use this for initialization
