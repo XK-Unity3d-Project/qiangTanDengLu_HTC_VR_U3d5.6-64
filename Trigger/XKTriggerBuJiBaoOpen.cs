@@ -24,11 +24,16 @@ public class XKTriggerBuJiBaoOpen : MonoBehaviour {
 			}
 		}
 
-		if (other.GetComponent<XkPlayerCtrl>() == null) {
-			return;
-		}
+		//if (other.GetComponent<XkPlayerCtrl>() == null) {
+		//	return;
+		//}
 
-		if (IsActiveTrigger) {
+        if (other.GetComponent<XKXuNiPlayerCtrl>() == null)
+        {
+            return;
+        }
+
+        if (IsActiveTrigger) {
 			return;
 		}
 		IsActiveTrigger = true;

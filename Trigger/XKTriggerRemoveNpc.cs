@@ -46,27 +46,32 @@ public class XKTriggerRemoveNpc : MonoBehaviour {
 			return;
 		}
 
-		if (other.GetComponent<XkPlayerCtrl>() == null) {
-			return;
-		}
+		//if (other.GetComponent<XkPlayerCtrl>() == null) {
+		//	return;
+		//}
+        
+        if (other.GetComponent<XKXuNiPlayerCtrl>() == null)
+        {
+            return;
+        }
 
-//		switch (Mode) {
-//		case TriggerMode.DanJi:
-//			if (XkGameCtrl.GameModeVal == GameMode.LianJi) {
-//				if (XkPlayerCtrl.PlayerTranFeiJi != null && XkPlayerCtrl.PlayerTranTanKe != null) {
-//					return;
-//				}
-//			}
-//			break;
-//
-//		case TriggerMode.LianJi:
-//			if (XkGameCtrl.GameModeVal != GameMode.LianJi) {
-//				return;
-//			}
-//			break;
-//		}
+        //		switch (Mode) {
+        //		case TriggerMode.DanJi:
+        //			if (XkGameCtrl.GameModeVal == GameMode.LianJi) {
+        //				if (XkPlayerCtrl.PlayerTranFeiJi != null && XkPlayerCtrl.PlayerTranTanKe != null) {
+        //					return;
+        //				}
+        //			}
+        //			break;
+        //
+        //		case TriggerMode.LianJi:
+        //			if (XkGameCtrl.GameModeVal != GameMode.LianJi) {
+        //				return;
+        //			}
+        //			break;
+        //		}
 
-		RemoveSpawnPointNpc();
+        RemoveSpawnPointNpc();
 	}
 
 	public void RemoveSpawnPointNpc()

@@ -11,11 +11,16 @@ public class XKTriggerBuJiBaoClose : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.GetComponent<XkPlayerCtrl>() == null) {
-			return;
-		}
+		//if (other.GetComponent<XkPlayerCtrl>() == null) {
+		//	return;
+        //}
+        
+        if (other.GetComponent<XKXuNiPlayerCtrl>() == null)
+        {
+            return;
+        }
 
-		bool isClose = TriggerBuJiBaoOpen.CloseSpawnBuJiBaoToPlayer();
+        bool isClose = TriggerBuJiBaoOpen.CloseSpawnBuJiBaoToPlayer();
 		if (!isClose) {
 			return;
 		}
