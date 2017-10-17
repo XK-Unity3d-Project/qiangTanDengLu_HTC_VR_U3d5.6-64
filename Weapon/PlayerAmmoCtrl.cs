@@ -324,7 +324,7 @@ public class PlayerAmmoCtrl : MonoBehaviour {
 		if (AmmoType == PlayerAmmoType.PuTongAmmo || AmmoType == PlayerAmmoType.GaoBaoAmmo) {
 			//Destroy(ObjAmmo, 0.1f); //test
 			if (!IsInvoking("DaleyHiddenPlayerAmmo")) {
-				Invoke("DaleyHiddenPlayerAmmo", 0.2f);
+				Invoke("DaleyHiddenPlayerAmmo", 0.01f);
 			}
 		}
 		else {
@@ -336,7 +336,7 @@ public class PlayerAmmoCtrl : MonoBehaviour {
 	{
 		if (TrailScript != null) {
 			TrailScript.time = 0f;
-			Invoke("ResetTrailScriptInfo", 0.1f);
+			Invoke("ResetTrailScriptInfo", 0.01f);
 		}
 		else {
 			gameObject.SetActive(false);

@@ -19,6 +19,10 @@ public class NpcAmmoCtrl : MonoBehaviour
 	public GameObject SandParticle;			//沙滩.
 	public GameObject GlassParticle;		//玻璃.
 	public GameObject TestSpawnNpc;
+    /// <summary>
+    /// 锁定不被删除的子弹,如火箭弹.
+    /// </summary>
+    public bool IsLockAmmo = false;
 	Vector3 AmmoEndPos;
 	Vector3 AmmoStartPos;
 	GameObject ObjAmmo;

@@ -1628,7 +1628,10 @@ public class XkGameCtrl : MonoBehaviour {
 				NpcAmmoList.Remove(ammoArray[i]);
 				continue;
 			}
-			script.GameNeedRemoveAmmo();
+            if (!script.IsLockAmmo)
+            {
+                script.GameNeedRemoveAmmo();
+            }
 		}
 	}
 	
